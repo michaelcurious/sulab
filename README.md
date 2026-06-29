@@ -16,8 +16,8 @@ Then open `http://localhost:4173`.
 - Publications live in `content/publications.txt`; one citation per paragraph.
 - Any PMID in the citation becomes a PubMed link automatically.
 - Images for future editors should go in `content/uploads`.
-- `su-edit-portal/config.yml` is a Decap CMS starter config. Before publishing, change
-  `your-github-username/sulabcu.com` to the real GitHub repository.
+- `su-edit-portal/config.yml` is a Decap CMS starter config pointed at
+  `michaelcurious/sulab`.
 
 ## Hosting recommendation
 

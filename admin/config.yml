@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-github-username/sulabcu.com
+  repo: michaelcurious/sulab
   branch: main
 
 media_folder: "content/uploads"
