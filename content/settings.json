@@ -1,0 +1,12 @@
+{
+  "siteName": "Su Lab",
+  "department": "University of Colorado Boulder | MCDB",
+  "contactEmail": "tin.su@colorado.edu",
+  "theme": {
+    "paper": "#f7f5ef",
+    "ink": "#141816",
+    "teal": "#0f6d6f",
+    "amber": "#d79a2b",
+    "crimson": "#9a3d43"
+  }
+}

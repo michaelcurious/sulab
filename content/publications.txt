@@ -1,0 +1,166 @@
+Shiferaw M, Su TT. Radiation-induced cell fate plasticity. Open Biol. 2026 Jan 14;16(1):250352. doi: 10.1098/rsob.250352. PMID: 41537970.
+
+Gomes NP, Frederick B, Su TT.  Sensitivity to an inhibitor of translation elongation in solid and hematologic cancers. Sci Rep. 2025 Jul 1;15(1):21328. doi: 10.1038/s41598-025-06273-6. PMID: 40596490.
+
+Su, T.T. (2025). SVC112: From Hummingbirds to Head and Neck Cancer. In: Deng, WM., Gonzaléz, C. (eds) The Drosophila Model in Cancer. Advances in Experimental Medicine and Biology, vol 1482. Springer, Cham. doi: 10.1007/978-3-031-97035-1_14. PMID: 40745146
+
+Colon Plaza S, Su TT. Ionizing radiation induces cells with past caspase activity that contribute to the adult organ in Drosophila and show reduced Loss of Heterozygosity. Cell Death Discov. 2024 Jan 5;10(1):6. doi: 10.1038/s41420-023-01769-4. PMID: 38182576
+
+Brown J, Su TT. E2F1, DIAP1, and the presence of a homologous chromosome promote while JNK inhibits radiation-induced Loss of Heterozygosity in Drosophila melanogaster. Genetics. 2023 Oct 24:iyad192. doi: 10.1093/genetics/iyad192. PMID: 37874851
+
+Su TT. How to initiate tissue regeneration by generating mutually exclusive cell states. PLoS Biol. 2023 Jun 6;21(6):e3002155. doi: 10.1371/journal.pbio.3002155. PMID: 37279465; PMCID: PMC10243753. PMID: 37279465
+
+Gomes NP, Frederick B, Jacobsen JR, Chapnick D, Su TT.  A high throughput screen with a clonogenic endpoint to identify radiation modulators of cancer. Radiat Res. 2023 Feb 1;199(2):132-147. doi: 10.1667/RADE-22-00086.1. PMID: 36583948
+
+Ledru M, Clark CC A, Brown J, Verghese S, Ferrara S, Goodspeed A and Su TT. Differential gene expression analysis identified determinants of cell fate plasticity during radiation-induced regeneration in Drosophila. PLoS Genet. 2022 Jan 6;18(1):e1009989. PMID: 34990447
+
+Colon-Plaza S, Su TT. Non-Apoptotic Role of Apoptotic Caspases in the Drosophila Nervous System. Front Cell Dev Biol. 2022 Feb 9;10:839358. PMID: 35223857
+
+Su TT. Non-apoptotic roles of apoptotic proteases: new tricks for an old dog. Open Biol. 2020 Aug;10(8):200130. doi: 10.1098/rsob.200130. Epub 2020 Aug 19. PMID: 32810419
+
+Brown J, Bush I, Bozon J and Su TT. Cells with loss-of-heterozygosity after exposure to ionizing radiation in Drosophila are culled by p53-dependent and p53-independent mechanisms. PLoS Genet. 2020 Oct 19;16(10):e1009056. PMID: 33075096
+
+Frederick BA, Gupta R, Atilano-Roque A, Su TT, Raben D. Combined EGFR1 and PARP1 Inhibition Enhances the Effect of Radiation in Head and Neck Squamous Cell Carcinoma Models. Radiation Res. 2020 Nov 10;194(5):519-531. PMID: 32936912
+
+Keysar SB, Gomes N, Miller B, Jackson BC, Le PN, Morton JJ, Reisinger J, Chimed TS, Gomez KE, Nieto C, Frederick B, Pronk GJ, Somerset HL, Tan AC, Wang XJ, Raben D, Su TT*, Jimeno A*. (*co-corresponding authors). Inhibiting translation elongation with SVC112 suppresses cancer stem cells and inhibits growth in head and neck squamous carcinoma. Cancer Res. 2020 Jan 7. pii: canres.3232.2019. PMID: 31911553
+
+Tin Tin Su. What Drosophila Can Teach Us About Radiation Biology of Human Cancers. Adv Exp Med Biol. 2019;1167:225-236. PMID: 31520358
+
+Tin Tin Su. Drug screening in Drosophila; why, when, and when not?. Wiley Interdiscip Rev Dev Biol. 2019 Nov;8(6):e346, WIREs Developmental Biology. PMID: 31056843
+
+Monn Monn Myat, Dheveline Louis, Andreas Mavrommatis, Latoya Collins, Jamal Mattis, Michelle Ledru, Shilpi Verghese, and Tin Tin Su. Regulators of cell movement during development and regeneration in Drosophila. Open Biology (The Royal Society). 2019 May 31;9(5):180245. PMID: 31039676
+
+Summative Report on Internal Evaluation for LEAP, Leadership Education for Advancement and Promotion In Equity in STEM: Measurements, Methodologies, & Metrics for Research & Evaluation. Patricia Rankin, Joyce McCarl Nielsen, Carol Lynch, Todd Gleeson, Tin Tin Su, and Sandra Laursen. https://ssrn.com/abstract=3344658 (posted March 05 2019). Full Article Here
+
+Verghese, S. and Su TT. Ionizing radiation induces stem cell-like properties in a caspase-dependent manner in Drosophila. PLoS Genet. 2018 Nov 21;14(11):e1007659. PMID: 30462636
+
+Tin Tin Su. Cellular plasticity, caspases and autophagy; that which does not kill us, well, makes us different. Open Biology (Royal Society), 28 November 2018.DOI: 10.1098/rsob.180157. PMID: 30487302
+
+Robert J. Duronio, Patrick H. O'Farrell, Greenfield Sluder, Tin Tin Su. Sophisticated lessons from simple organisms: appreciating the value of curiosity-driven research. Disease Models and Mechanisms, 2017 10: 1381-1389; doi: 10.1242/dmm.031203.Full Article Here
+
+Verghese, S. and Su TT. STAT, Wingless, and Nurf-38 determine the accuracy of regeneration after radiation damage in Drosophila. PLoS Genetics, 2017 Oct 13. PMID: 29028797
+
+Verghese, S. and Su TT. Drosophila Wnt and STAT Define Apoptosis-Resistant Epithelial Cells for Tissue Regeneration after Irradiation. PLoS Biology, 2016 Sep 1;14(9):e1002536. PMID: 27584613
+
+Stickel SA, Gomes NP (co-first authors), Frederick B, Raben D, Su TT. Bouvardin Is A Radiation Modulator With A Novel Mechanism Of Action. Radiation Research, Oct;184(4):392-403. PMID: 26414509
+
+Xing Y, Su TT, Ruohola-Baker H. Tie-mediated signal from apoptotic cells protects stem cells in Drosophila melanogaster. Nat Commun. 2015 May 11;6:7058. PMID: 25959206
+
+Tin Tin Su. Non-autonomous consequences of cell death and other perks of being metazoan. AIMS Genetics (review) Volume 2, Issue 1, Pages: 54 - 69, 2015. Open Access
+
+Amber Bilak, Lyle Uyetake and Tin Tin Su. Dying cells protect survivors from radiation-induced cell death in Drosophila. PLoS Genetics, PLoS Genet. 2014 Mar 27;10(3):e1004220. PMID: 24675716
+
+Stefanie Stickel and Tin Tin Su. Oncogenic mutations produce similar phenotypes in Drosophila tissues of diverse origins. Bio Open,. 2014 Mar 15;3(3):201-9. PMID:24570398
+
+Stefanie Stickel, Nathan Gomes and Tin Tin Su. The Role of Translational Regulation in Survival after Radiation Damage; an Opportunity for Proteomics Analysis. Proteomes 2014, 2(2), 272-290. Open Access
+
+van Bergeijk P, Heimiller J, Uyetake L, Su TT. Genome-Wide Expression Analysis Identifies a Modulator of Ionizing Radiation-Induced p53-Independent Apoptosis in Drosophila melanogaster. PLoS One. 2012;7(5):e36539. PMID:22666323
+
+M. Gladstone*, B. Frederick*, D. Zheng, A. Edwards, P. Yoon, S. Stickel, T. DeLaney, D. C. Chan, D. Raben, T. T. Su. A translation inhibitor identified in a Drosophila screen enhances the effect of ionizing radiation and taxol in mammalian models of cancer. (*shared first authors) Disease Models and Mechanisms. 2012 May;5(3):342-50. PMID:22344740
+
+A. Edwards*, Mara Gladstone*, P. Yoon, D. Raben, Barbara Frederick, T. T. Su, Combinatorial effect of maytansinol and radiation in Drosophila and human cancer cells, Disease Models and Mechanisms. (*shared first authors) 2011 Jul;4(4):496-503. Epub 2011 Apr 18. PubMed ID:21504911
+
+Smith MK, Trujillo C, Su TT. The benefits of using clickers in small-enrollment seminar-style biology courses. CBE Life Sci Educ. 2011 Spring;10(1):14-7. PMID:21364096
+
+M. Gladstone & T. T. Su. Radiation Responses and Resistance. International Review of Cell and Molecular Biology, 2012;299:235-53. PMID:22959305
+
+M. Gladstone & T. T. Su. Chemical genetics and drug screening in Drosophila cancer models. J. Genetics and Genomics, 2011 Oct 20;38(10):497-504. PMID:22035870
+
+Su TT. Safeguarding genetic information in Drosophila. Chromosoma. 2011 Dec;120(6):547-55. doi: 10.1007/s00412-011-0342-9. Epub 2011 Sep 17. PMID:21927823
+
+M. Gladstone & T. T. Su. Screening for radiation sensitizers of Drosophila checkpoint mutants. Methods Mol Biol., 2011;782:105-17. PMID:21870288
+
+A. Wichmann, L. Uyetake and T. T. Su. E2F1 and E2F2 have opposite effects on radiation-induced p53-independent apoptosis in Drosophila, Dev Biol. 2010 346(1):80-9. PMID:20659447
+
+T. T. Su. 2010. The effect of a DNA damaging agent on embryonic cell cycles of the cnidarian Hydractinia PLoS One. 2010 Jul 23;5(7):e11760. PMID:20668699
+
+Su TT. Heterochromatin replication: better late than ever. Curr Biol. 2010 Dec 7;20(23):R1018-20. PMID:21145016
+
+K. Garcia, J. Stumpff, T. Duncan, and T. T. Su. Tyrosines in the Kinesin-5 head domain are necessary for phosphorylation by Wee1 and for mitotic spindle integrity. Current Biology 2009 19:1670-6. PMID:19800237
+
+M. K. Smith, W. B. Wood, W. K. Adams, C. Wieman, J. K. Knight, N. Guild, T. T. Su. Why Peer Discussion Improves Student Performance on In-Class Concept Questions. Science, 323, 122 (2009). PMID:19119232
+
+A. Bilak and T. T. Su. Regulation of Drosophila melanogaster pro-apoptotic gene hid. APOPTOSIS. 2009 Aug;14(8):943-9. PMID:19554451
+
+Jaklevic B, Uyetake L, Wichmann A, Bilak A, English CN, Su TT. Modulation of ionizing radiation-induced apoptosis by bantam microRNA in Drosophila. Dev Biol. 2008 Aug 1;320(1):122-30. PubMed ID:18550049
+
+Yi X, Lemstra W, Vos MJ, Shang Y, Kampinga HH, Su TT, Sibon OC. A long-term flow cytometry assay to analyze the role of specific genes of Drosophila melanogaster S2 cells in surviving genotoxic stress. Cytometry A. 2008 Jul;73(7):637-42. PubMed ID:18496848
+
+Garcia K, Su TT. Cell cycle regulation. Fly (meeting report). PubMed ID:18820450
+
+J. LaRocque, Jaklevic B, Su TT, J. Sekelsky. Drosophila ATR in double-strand break repair. Genetics. 2007 Mar;175(3):1023-33. Epub 2006 Dec 28. PubMed ID:17194776
+
+Garcia K, Wichmann, A., Su TT. Cell cycle regulation. Fly (meeting report) 1:2, 125-131; March/April 2007. PubMed ID:19378458
+
+Kristin Garcia, Tod Duncan and T. T. Su. Analysis of the Cell Division Cycle in Drosophila. Methods, 2007 Feb;41(2):198-205. PubMed ID:17189862
+
+Jaklevic B, Uyetake L, Lemstra W, Chang J, Leary W, Edwards A, Vidwans SJ, Sibon O, Su TT. Contribution of Growth and Cell Cycle Checkpoints to Radiation Survival in Drosophila. (2006) Genetics. 174(4):1963-72. Epub 2006 Oct 8. PubMed ID:17028317
+
+Wichmann, A., Jaklevic, B. and T. T. Su, Ionizing Radiation induces caspase-dependent but Chk2 and p53-independent cell death in Drosophila melanogaster. (2006) PNAS 103(26):9952-7. PubMed ID:16785441
+
+T. T. Su. Cellular Responses to DNA Damage; One Signal, Multiple Choices. (2006) Annual Reviews in Genetics, 2006;40:187-208. PubMed ID:16805666
+
+J. Stumpff, D. R. Kellogg, K. Krohne and T. T. Su. Drosophila Wee1 interacts with Members of -TuRC and is required for proper mitotic spindle morphogenesis and positioning. (2005) Curr Bio, 15; 1525-34. PubMed ID:16139207
+
+A. Purdy, L. Uyetake, M. G. Cordeiro, T. T. Su. Regulation of mitosis in response to damaged or incompletely replicated DNA require different levels of Grapes (Drosophila Chk1). (2005) J. Cell Sci. 118: 3305-3315. PubMed ID:16079276
+
+de Vries HI, Uyetake L, Lemstra W, Brunsting JF, Su TT, Kampinga HH, Sibon OC. Grp/DChk1 is required for G2-M checkpoint activation in Drosophila S2 cells, whereas Dmnk/DChk2 is dispensable. (2005) J Cell Sci.118:1833-42. PubMed ID:15860729
+
+Stumpff J, Duncan T, Homola E, Campbell SD, Su TT. Drosophila Wee1 kinase regulates Cdk1 and mitotic entry during embryogenesis. (2004) Curr Biol. 14:2143-8. PubMed ID:15589158
+
+B. Jaklevic and T. T. Su, Relative contribution of DNA repair, cell cycle checkpoints and cell death to survival after DNA damage in Drosophila larvae. (2004) Curr. Biol., Jan 6;14(1):23-32. PubMed ID:14711410
+
+Jaklevic B, Purdy A, Su TT. Control of mitotic entry after DNA damage in Drosophila. Methods Mol Biol. 2004;280:245-56. PubMed ID:15187258
+
+Purdy A, Su TT. Telomeres: not all breaks are equal. Curr Biol. 2004 Aug 10;14(15):R613-4. PubMed ID:15296775
+
+Duncan T, Su TT. Embryogenesis: coordinating cell division with gastrulation. Curr Biol. 2004 Apr 20;14(8):R305-7. PubMed ID:15084299
+
+Patrick H. O'Farrell, Jason Stumpff and Tin Tin Su. Embryonic cleavage cycles: how is a mouse like a fly? (2004) Curr. Biol. Jan 6;14(1):R35-45. PubMed ID:14711435
+
+Su, T.T., and Stumpff, J. (2004). Promiscuity rules? The dispensability of cyclin E and Cdk2. Sci STKE 2004, 224: pe11. PubMed ID:15026579
+
+B. De Felice, R. R. Wilson, P. Mondola, G. Matrone, S. Damiano, C. Garbi, L. Nezi, and T. T. Su. Characterization of DIP1, a novel nuclear protein in Drosophila melanogaster. (2003) Biochemical and Biophysical Research Communications, 307:224-228. PubMed ID:12859943
+
+A. Laurençon, A. Purdy, J. Sekelsky, R. S. Hawley and T. T. Su. Phenotypic analysis of separation-of-function alleles of MEI-41, Drosophila ATM/ATR (2003) Genetics, 164; 589-601. PubMed ID:12807779
+
+B. Jaklevic and T. T. Su. Cell Turnover: Flexible Coupling Meets Needs of Development. (2003) Current Biology, 13:R805-7. PubMed ID:14561421
+
+M. Garner, S. van Kreeveld and T. T. Su. mei-41 and bub1 block mitosis at two distinct steps in response to incomplete DNA replication in Drosophila embryos. (2001) Current Biology,11; 1595-1599. PubMed ID:11676920
+
+T. T. Su, D. H. Parry, B. Donahoe, C-T. Chien, P. H. O'Farrell, A. Purdy. Cell cycle roles for two 14-3-3 proteins during Drosophila development (2001) J. Cell Science, 114; 3445-3454. PubMed ID:11682604
+
+Su, T. T. and Jaklevic, B. DNA damage leads to a Cyclin A-dependent delay in metaphase-anaphase transition in the Drosophila gastrula. Curr Biol 2001, 11:8-17. PubMed ID:11166174
+
+Su, T. T. How, when and why cells get rid of Cyclin A. (2001) Current Biology, 11; R467-469. PDF here (citation missing from PubMed)
+
+Vidwans, S. J. and Su, T. T. Cycling through development in Drosophila and other metazoa. Nature Cell. Biol. 2001. 3; E35-39. PubMed ID:11146648
+
+Su, T. T. Walker, J, and Stumpff, J. Activating the DNA damage checkpoint in a developmental context. Curr Biol 2000 Feb 10;10(3):119-26. PubMed ID:10679321
+
+Su, T. T. The regulation of cell growth and proliferation during organogenesis. In Vivo. 2000 Jan-Feb;14(1):141-8. PubMed ID:10757071
+
+Su, T. T. and Vidwans S. J. DNA defects target the centrosome. Nat Cell Biol. 2000 Feb;2(2):E28-9. PubMed ID:10655600
+
+Su, T. T. Immunoblotting of proteins from single Drosophila embryos. In 'Drosophila Protocols'. Edited by Sullivan, Ashburner and Hawley. 2000. Cold Spring Harbor Press. (book chapter, not in PubMed).
+
+Tin Tin's papers from her post-doc with Pat O'Farrell
+Su, T. T. Campbell, S. D., and O'Farrell, P. H. Drosophila grapes/CHK1 mutants are defective in cyclin proteolysis and coordination of mitotic events. (1999) Current Biology, 9:919-922. PubMed ID:10469601
+
+Su, T. T. and O'Farrell, P. H., Size control: Cell proliferation does not equal growth. (1998) Current Biology, 8:R687-R689. PubMed ID:9768354
+
+Su, T. T. Sprenger, F., DiGregorio, P., Campbell, S. D., and O'Farrell, P. H. Exit from mitosis in Drosophila syncytial embryos requires proteolysis and cyclin degradation, and is associated with localized dephosphorylation. (1998) Genes & Dev., 12: 1495-1503. PubMed ID:9585509
+
+Su, T. T. Campbell, S. D., and O'Farrell, P. H. Cell cycle program in germ cells of the Drosophila embryo, Dev. Biol., (1998) 196; 160-170. PubMed ID:9576829
+
+Su, T. T. and O'Farrell, P. H. Chromosome association of minichromosome maintenance proteins in Drosophila endoreplication cycles. (1998) J. Cell. Biol, 140; 451-460. PubMed ID:9456309
+
+Su, T. T. and O'Farrell, P. H. Chromosome association of minichromosome maintenance proteins in Drosophila mitotic cycles. (1997) J. Cell. Biol. 139; 13-21. PubMed ID:9314525
+
+Su, T. T., Yakubovich, N. and O'Farrell, P. H. Cloning of Drosophila MCM homologs and analysis of their requirement during embryogenesis. (1997) GENE, 192;283-289. PubMed ID:9224901
+
+Su., T. T. Feger, G. and O'Farrell, P. H. Drosophila MCM protein complexes. (1996) Mol. Biol. Cell. 7; 319-329. PubMed ID:8688561
+
+Feger G, Vaessin H, Su TT, Wolff E, Jan LY, Jan YN. dpa, a member of the MCM family, is required for mitotic DNA replication but not endoreplication in Drosophila. (1995) EMBO J. 14:5387-98. PubMed ID:7489728
+
+Su, T. T., Follette, P. J. and O'Farrell, P. H. Qualifying for the license to replicate. (1995) Cell 81; 825-828. PubMed ID:7781058

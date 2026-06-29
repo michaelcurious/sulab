@@ -1,0 +1,67 @@
+backend:
+  name: github
+  repo: your-github-username/sulabcu.com
+  branch: main
+
+media_folder: "content/uploads"
+public_folder: "/content/uploads"
+
+site_url: "https://sulabcu.com"
+display_url: "https://sulabcu.com"
+logo_url: "/assets/hero-cell-fate.png"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "content/pages/home.md"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Summary", name: "hero_summary", widget: "text" }
+          - { label: "Research Summary", name: "research_summary", widget: "markdown" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+      - label: "Site Settings"
+        name: "settings"
+        file: "content/settings.json"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string" }
+          - { label: "Department Line", name: "department", widget: "string" }
+          - { label: "Contact Email", name: "contactEmail", widget: "string" }
+          - label: "Theme Colors"
+            name: "theme"
+            widget: "object"
+            fields:
+              - { label: "Paper", name: "paper", widget: "color" }
+              - { label: "Ink", name: "ink", widget: "color" }
+              - { label: "Teal", name: "teal", widget: "color" }
+              - { label: "Amber", name: "amber", widget: "color" }
+              - { label: "Crimson", name: "crimson", widget: "color" }
+      - label: "Publications"
+        name: "publications"
+        file: "content/publications.txt"
+        fields:
+          - label: "Publication List"
+            name: "body"
+            widget: "text"
+            hint: "Paste one citation per paragraph. PMID and DOI values are linked automatically on the public site."
+  - name: "people"
+    label: "People"
+    folder: "content/people"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Portrait", name: "portrait", widget: "image", required: false }
+      - { label: "Bio", name: "body", widget: "markdown" }
+  - name: "news"
+    label: "News"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
