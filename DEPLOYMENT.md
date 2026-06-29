@@ -3,10 +3,22 @@
 Recommended production setup:
 
 1. Put this folder in a GitHub repository, for example `sulabcu.com`.
-2. Deploy the repository with Cloudflare Pages.
-3. Add `sulabcu.com` as a custom domain in Cloudflare Pages.
-4. In GoDaddy DNS, replace the parked `A` record with the records Cloudflare Pages gives you.
+2. Deploy the repository with Cloudflare Workers Static Assets or Cloudflare Pages.
+3. Add `sulabcu.com` as a custom domain in Cloudflare.
+4. In GoDaddy DNS, replace the parked `A` record with the records Cloudflare gives you.
 5. Protect `/su-edit-portal` with Cloudflare Access or Decap/GitHub authentication.
+
+## Cloudflare Workers Static Assets
+
+The repo includes `wrangler.toml`, so Cloudflare's Workers Git flow can deploy it
+with:
+
+```text
+npx wrangler deploy
+```
+
+The static assets directory is the repository root. `.assetsignore` prevents
+development and deployment metadata from being uploaded as public files.
 
 ## Admin security
 
