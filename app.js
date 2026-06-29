@@ -4,6 +4,67 @@ const publicationSearch = document.querySelector("#publication-search");
 const filterButtons = [...document.querySelectorAll(".filter-button")];
 let publications = [];
 let activeFilter = "all";
+let siteContent = null;
+
+function setText(selector, value) {
+  const element = document.querySelector(selector);
+  if (element && value) {
+    element.textContent = value;
+  }
+}
+
+function setEmailLinks(email) {
+  if (!email) return;
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.href = `mailto:${email}`;
+    if (link.textContent.includes("@")) {
+      link.textContent = email;
+    }
+  });
+}
+
+function renderNews(newsItems = []) {
+  const track = document.querySelector(".ticker-track");
+  if (!track || !newsItems.length) return;
+
+  const items = newsItems
+    .map(
+      (item) => `
+        <article>
+          <time datetime="${item.date || ""}">${item.label || item.date || "News"}</time>
+          <span>${item.text || ""}</span>
+        </article>
+      `,
+    )
+    .join("");
+
+  const duplicateItems = newsItems
+    .map(
+      (item) => `
+        <article aria-hidden="true">
+          <time datetime="${item.date || ""}">${item.label || item.date || "News"}</time>
+          <span>${item.text || ""}</span>
+        </article>
+      `,
+    )
+    .join("");
+
+  track.innerHTML = items + duplicateItems;
+}
+
+function applySiteContent(content) {
+  if (!content) return;
+
+  setText("#hero-title", content.hero?.title);
+  setText(".hero-copy", content.hero?.copy);
+  setText("#research .section-copy h2", content.research?.title);
+  setText("#research .section-copy p:last-child", content.research?.copy);
+  setText("#join .join-panel h2", content.join?.title);
+  setText("#join .join-panel p:not(.eyebrow)", content.join?.copy);
+  setEmailLinks(content.contact?.email);
+  renderNews(content.news);
+}
 
 function cleanText(value) {
   return value
@@ -89,8 +150,13 @@ function renderPublications() {
 }
 
 async function loadPublications() {
-  const response = await fetch("content/publications.txt");
-  const text = await response.text();
+  let text = siteContent?.publications || "";
+
+  if (!text.trim()) {
+    const response = await fetch("content/publications.txt");
+    text = await response.text();
+  }
+
   publications = text
     .split(/\n\s*\n/)
     .map((entry, index) => parsePublication(entry, index))
@@ -110,6 +176,21 @@ filterButtons.forEach((button) => {
 
 publicationSearch.addEventListener("input", renderPublications);
 
-loadPublications().catch(() => {
+async function loadSiteContent() {
+  try {
+    const response = await fetch("/api/content", { cache: "no-store" });
+    if (response.ok) {
+      siteContent = await response.json();
+      applySiteContent(siteContent);
+      return;
+    }
+  } catch (error) {
+    const response = await fetch("content/default-content.json");
+    siteContent = await response.json();
+    applySiteContent(siteContent);
+  }
+}
+
+loadSiteContent().then(loadPublications).catch(() => {
   publicationList.innerHTML = `<p class="publication-meta">Publication list could not load in this preview.</p>`;
 });

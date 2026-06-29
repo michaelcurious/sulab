@@ -20,6 +20,26 @@ npx wrangler deploy
 The static assets directory is the repository root. `.assetsignore` prevents
 development and deployment metadata from being uploaded as public files.
 
+## Passcode editor without GitHub login
+
+The `/su-edit-portal/` page uses the Worker API at `/api/content`. It does not
+ask editors to log in with GitHub.
+
+To let it save live edits, add a Cloudflare KV namespace and bind it to the
+Worker as:
+
+```text
+SITE_CONTENT
+```
+
+Optional but recommended: add a Worker secret named:
+
+```text
+ADMIN_CODE
+```
+
+If no secret is set, the editor uses the temporary code `sulab-2026`.
+
 ## Admin security
 
 The code gate in `su-edit-portal/index.html` is only a prototype preview. It

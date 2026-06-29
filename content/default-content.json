@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Radiation response and tissue repair",
+    "copy": "The lab uses Drosophila and cancer models to study DNA damage responses, apoptosis, regeneration, loss of heterozygosity, and radiation-modifying drugs."
+  },
+  "research": {
+    "title": "How damaged tissues make choices",
+    "copy": "Ionizing radiation creates a moment of decision for cells and tissues. The lab studies how damage signals, caspases, checkpoints, chromosome state, and tissue context shape whether cells die, survive, change fate, or contribute to regeneration."
+  },
+  "join": {
+    "title": "Interested in the lab?",
+    "copy": "Add current opportunities, rotation expectations, undergraduate research openings, and preferred contact instructions here."
+  },
+  "contact": {
+    "email": "tin.su@colorado.edu"
+  },
+  "theme": {
+    "paper": "#f7f5ef",
+    "ink": "#141816",
+    "teal": "#0f6d6f",
+    "amber": "#d79a2b",
+    "crimson": "#9a3d43"
+  },
+  "news": [
+    {
+      "date": "2026-01-14",
+      "label": "Jan 14, 2026",
+      "text": "Radiation-induced cell fate plasticity review published in Open Biology."
+    },
+    {
+      "date": "2025-07-01",
+      "label": "Jul 1, 2025",
+      "text": "New study on translation elongation inhibition published in Scientific Reports."
+    },
+    {
+      "date": "2025-01-01",
+      "label": "2025",
+      "text": "SVC112 chapter appears in The Drosophila Model in Cancer."
+    },
+    {
+      "date": "2024-01-05",
+      "label": "Jan 5, 2024",
+      "text": "Work on past caspase activity and adult organ contribution published in Cell Death Discovery."
+    }
+  ],
+  "publications": ""
+}

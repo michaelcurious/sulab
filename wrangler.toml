@@ -1,5 +1,7 @@
 name = "sulab"
 compatibility_date = "2026-06-29"
+main = "worker.js"
 
 [assets]
 directory = "."
+binding = "ASSETS"

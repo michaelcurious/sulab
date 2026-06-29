@@ -6,6 +6,7 @@ DEPLOYMENT.md
 README.md
 server.mjs
 wrangler.toml
+worker.js
 package.json
 package-lock.json
 node_modules
