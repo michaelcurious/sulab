@@ -240,6 +240,20 @@
         </section>
 
         <section class="card">
+          <h2>Updates</h2>
+          <div class="field-stack">
+            <label>
+              Title
+              <input id="updates-title" />
+            </label>
+            <label>
+              Summary
+              <textarea id="updates-copy"></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="card">
           <h2>Join</h2>
           <div class="field-stack">
             <label>
@@ -317,6 +331,8 @@
         setValue("hero-copy", data.hero?.copy);
         setValue("research-title", data.research?.title);
         setValue("research-copy", data.research?.copy);
+        setValue("updates-title", data.updates?.title);
+        setValue("updates-copy", data.updates?.copy);
         setValue("join-title", data.join?.title);
         setValue("join-copy", data.join?.copy);
         setValue("contact-email", data.contact?.email);
@@ -345,6 +361,11 @@
             ...(content.research || {}),
             title: getValue("research-title"),
             copy: getValue("research-copy"),
+          },
+          updates: {
+            ...(content.updates || {}),
+            title: getValue("updates-title"),
+            copy: getValue("updates-copy"),
           },
           join: {
             ...(content.join || {}),

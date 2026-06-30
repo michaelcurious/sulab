@@ -7,9 +7,13 @@
     "title": "How damaged tissues make choices",
     "copy": "Ionizing radiation creates a moment of decision for cells and tissues. The lab studies how damage signals, caspases, checkpoints, chromosome state, and tissue context shape whether cells die, survive, change fate, or contribute to regeneration."
   },
+  "updates": {
+    "title": "Lab news",
+    "copy": "Follow recent publications, research updates, and lab announcements from the Su Lab."
+  },
   "join": {
     "title": "Interested in the lab?",
-    "copy": "Add current opportunities, rotation expectations, undergraduate research openings, and preferred contact instructions here."
+    "copy": "Students and researchers interested in cell fate, radiation response, regeneration, and Drosophila or cancer models are welcome to contact the lab."
   },
   "contact": {
     "email": "tin.su@colorado.edu"

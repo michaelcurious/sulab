@@ -18,6 +18,7 @@ function mergeContent(defaults, saved) {
     ...saved,
     hero: { ...(defaults.hero || {}), ...(saved.hero || {}) },
     research: { ...(defaults.research || {}), ...(saved.research || {}) },
+    updates: { ...(defaults.updates || {}), ...(saved.updates || {}) },
     join: { ...(defaults.join || {}), ...(saved.join || {}) },
     contact: { ...(defaults.contact || {}), ...(saved.contact || {}) },
     theme: { ...(defaults.theme || {}), ...(saved.theme || {}) },

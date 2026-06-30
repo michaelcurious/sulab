@@ -62,6 +62,8 @@ function applySiteContent(content) {
   setText("#research .section-copy p:last-child", content.research?.copy);
   setText("#join .join-panel h2", content.join?.title);
   setText("#join .join-panel p:not(.eyebrow)", content.join?.copy);
+  setText("#join .news-panel h2", content.updates?.title);
+  setText("#join .news-panel p:not(.eyebrow)", content.updates?.copy);
   setEmailLinks(content.contact?.email);
   renderNews(content.news);
 }
