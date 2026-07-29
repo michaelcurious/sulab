@@ -167,6 +167,22 @@
         margin-bottom: 10px;
       }
 
+      .intro-row,
+      .research-area-row {
+        display: grid;
+        gap: 10px;
+        padding: 12px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .intro-row {
+        grid-template-columns: 180px 1fr auto;
+      }
+
+      .research-area-row {
+        grid-template-columns: 86px 1fr 1fr auto;
+      }
+
       .section-title {
         display: flex;
         justify-content: space-between;
@@ -234,6 +250,8 @@
       @media (max-width: 760px) {
         .grid,
         .news-row,
+        .intro-row,
+        .research-area-row,
         .person-row,
         .editor-header {
           grid-template-columns: 1fr;
@@ -270,6 +288,32 @@
 
       <form class="grid" id="content-form">
         <section class="card">
+          <h2>Site Header</h2>
+          <div class="field-stack">
+            <label>
+              Lab name
+              <input id="site-name" />
+            </label>
+            <label>
+              Short tagline
+              <input id="site-tagline" />
+            </label>
+            <label>
+              Logo letters
+              <input id="site-mark" />
+            </label>
+            <label>
+              Affiliation line
+              <input id="site-affiliation" />
+            </label>
+            <label>
+              News tab label
+              <input id="site-news-label" />
+            </label>
+          </div>
+        </section>
+
+        <section class="card">
           <h2>Hero</h2>
           <div class="field-stack">
             <label>
@@ -280,12 +324,24 @@
               Short description
               <textarea id="hero-copy"></textarea>
             </label>
+            <label>
+              Primary button
+              <input id="hero-primary-button" />
+            </label>
+            <label>
+              Secondary button
+              <input id="hero-secondary-button" />
+            </label>
           </div>
         </section>
 
         <section class="card">
           <h2>Research</h2>
           <div class="field-stack">
+            <label>
+              Eyebrow label
+              <input id="research-eyebrow" />
+            </label>
             <label>
               Title
               <input id="research-title" />
@@ -295,6 +351,22 @@
               <textarea id="research-copy"></textarea>
             </label>
           </div>
+        </section>
+
+        <section class="card">
+          <div class="section-title">
+            <h2>Intro Highlights</h2>
+            <button type="button" id="add-intro">+ Add highlight</button>
+          </div>
+          <div id="intro-list"></div>
+        </section>
+
+        <section class="card full">
+          <div class="section-title">
+            <h2>Research Cards</h2>
+            <button type="button" id="add-research-area">+ Add card</button>
+          </div>
+          <div id="research-area-list"></div>
         </section>
 
         <section class="card">
@@ -313,16 +385,52 @@
 
         <section class="card">
           <h2>Contact</h2>
-          <label>
-            Email
-            <input id="contact-email" type="email" />
-          </label>
+          <div class="field-stack">
+            <label>
+              Eyebrow label
+              <input id="contact-eyebrow" />
+            </label>
+            <label>
+              Title
+              <input id="contact-title" />
+            </label>
+            <label>
+              Department
+              <input id="contact-department" />
+            </label>
+            <label>
+              Institution
+              <input id="contact-institution" />
+            </label>
+            <label>
+              Email
+              <input id="contact-email" type="email" />
+            </label>
+            <label>
+              CU page button label
+              <input id="contact-cu-label" />
+            </label>
+            <label>
+              PubMed button label
+              <input id="contact-pubmed-label" />
+            </label>
+          </div>
         </section>
 
         <section class="card full">
           <div class="section-title">
             <h2>People</h2>
             <button type="button" id="add-person">+ Add person</button>
+          </div>
+          <div class="field-stack" style="margin-bottom: 14px">
+            <label>
+              People label
+              <input id="people-eyebrow" />
+            </label>
+            <label>
+              People heading
+              <input id="people-title" />
+            </label>
           </div>
           <div id="people-list"></div>
         </section>
@@ -335,6 +443,24 @@
 
         <section class="card full">
           <h2>Publications</h2>
+          <div class="field-stack" style="margin-bottom: 14px">
+            <label>
+              Publications label
+              <input id="publications-eyebrow" />
+            </label>
+            <label>
+              Publications heading
+              <input id="publications-title" />
+            </label>
+            <label>
+              Search label
+              <input id="publications-search-label" />
+            </label>
+            <label>
+              Search placeholder
+              <input id="publications-search-placeholder" />
+            </label>
+          </div>
           <p>Keep one blank line between publications. PMIDs will still link automatically.</p>
           <textarea id="publications" style="min-height: 360px"></textarea>
         </section>
@@ -351,9 +477,13 @@
       const status = document.querySelector("#status");
       const newsList = document.querySelector("#news-list");
       const peopleList = document.querySelector("#people-list");
+      const introList = document.querySelector("#intro-list");
+      const researchAreaList = document.querySelector("#research-area-list");
       const saveButton = document.querySelector("#save-button");
       const addNewsButton = document.querySelector("#add-news");
       const addPersonButton = document.querySelector("#add-person");
+      const addIntroButton = document.querySelector("#add-intro");
+      const addResearchAreaButton = document.querySelector("#add-research-area");
       let adminCode = "";
       let content = null;
 
@@ -429,6 +559,35 @@
         });
       }
 
+      function renderIntro(items) {
+        introList.innerHTML = "";
+        items.forEach((item, index) => {
+          const row = document.createElement("div");
+          row.className = "intro-row";
+          row.innerHTML = `
+            <input class="intro-metric" aria-label="Highlight metric ${index + 1}" placeholder="2026" value="${escapeAttribute(item.metric || "")}" />
+            <input class="intro-text" aria-label="Highlight text ${index + 1}" placeholder="Highlight text" value="${escapeAttribute(item.text || "")}" />
+            <button type="button" class="secondary-button remove-intro" aria-label="Remove highlight ${index + 1}">Remove</button>
+          `;
+          introList.append(row);
+        });
+      }
+
+      function renderResearchAreas(areas) {
+        researchAreaList.innerHTML = "";
+        areas.forEach((area, index) => {
+          const row = document.createElement("div");
+          row.className = "research-area-row";
+          row.innerHTML = `
+            <input class="area-number" aria-label="Research card number ${index + 1}" placeholder="01" value="${escapeAttribute(area.number || "")}" />
+            <input class="area-title" aria-label="Research card title ${index + 1}" placeholder="Card title" value="${escapeAttribute(area.title || "")}" />
+            <input class="area-copy" aria-label="Research card copy ${index + 1}" placeholder="Short description" value="${escapeAttribute(area.copy || "")}" />
+            <button type="button" class="secondary-button remove-area" aria-label="Remove research card ${index + 1}">Remove</button>
+          `;
+          researchAreaList.append(row);
+        });
+      }
+
       function renderNews(news) {
         newsList.innerHTML = "";
         news.forEach((item, index) => {
@@ -445,19 +604,56 @@
 
       function fillForm(data) {
         content = data;
+        setValue("site-name", data.site?.name);
+        setValue("site-tagline", data.site?.tagline);
+        setValue("site-mark", data.site?.mark);
+        setValue("site-affiliation", data.site?.affiliation);
+        setValue("site-news-label", data.site?.newsLabel);
         setValue("hero-title", data.hero?.title);
         setValue("hero-copy", data.hero?.copy);
+        setValue("hero-primary-button", data.hero?.primaryButton);
+        setValue("hero-secondary-button", data.hero?.secondaryButton);
+        setValue("research-eyebrow", data.research?.eyebrow);
         setValue("research-title", data.research?.title);
         setValue("research-copy", data.research?.copy);
         setValue("updates-title", data.updates?.title);
         setValue("updates-copy", data.updates?.copy);
+        setValue("contact-eyebrow", data.contact?.eyebrow);
+        setValue("contact-title", data.contact?.title);
+        setValue("contact-department", data.contact?.department);
+        setValue("contact-institution", data.contact?.institution);
         setValue("contact-email", data.contact?.email);
+        setValue("contact-cu-label", data.contact?.cuPageLabel);
+        setValue("contact-pubmed-label", data.contact?.pubmedLabel);
+        setValue("people-eyebrow", data.peopleSection?.eyebrow);
+        setValue("people-title", data.peopleSection?.title);
+        setValue("publications-eyebrow", data.publicationSection?.eyebrow);
+        setValue("publications-title", data.publicationSection?.title);
+        setValue("publications-search-label", data.publicationSection?.searchLabel);
+        setValue("publications-search-placeholder", data.publicationSection?.searchPlaceholder);
         setValue("publications", data.publications);
+        renderIntro(data.intro || []);
+        renderResearchAreas(data.research?.areas || []);
         renderPeople(data.people || []);
         renderNews(data.news || []);
       }
 
       function readForm() {
+        const intro = [...introList.querySelectorAll(".intro-row")]
+          .map((row) => ({
+            metric: row.querySelector(".intro-metric").value.trim(),
+            text: row.querySelector(".intro-text").value.trim(),
+          }))
+          .filter((item) => item.metric || item.text);
+
+        const researchAreas = [...researchAreaList.querySelectorAll(".research-area-row")]
+          .map((row) => ({
+            number: row.querySelector(".area-number").value.trim(),
+            title: row.querySelector(".area-title").value.trim(),
+            copy: row.querySelector(".area-copy").value.trim(),
+          }))
+          .filter((area) => area.number || area.title || area.copy);
+
         const people = [...peopleList.querySelectorAll(".person-row")]
           .map((row) => {
             const imageUrl = row.querySelector(".person-image-url").value.trim();
@@ -482,15 +678,28 @@
 
         return {
           ...content,
+          site: {
+            ...(content.site || {}),
+            name: getValue("site-name"),
+            tagline: getValue("site-tagline"),
+            mark: getValue("site-mark"),
+            affiliation: getValue("site-affiliation"),
+            newsLabel: getValue("site-news-label"),
+          },
           hero: {
             ...(content.hero || {}),
             title: getValue("hero-title"),
             copy: getValue("hero-copy"),
+            primaryButton: getValue("hero-primary-button"),
+            secondaryButton: getValue("hero-secondary-button"),
           },
+          intro,
           research: {
             ...(content.research || {}),
+            eyebrow: getValue("research-eyebrow"),
             title: getValue("research-title"),
             copy: getValue("research-copy"),
+            areas: researchAreas,
           },
           updates: {
             ...(content.updates || {}),
@@ -499,7 +708,25 @@
           },
           contact: {
             ...(content.contact || {}),
+            eyebrow: getValue("contact-eyebrow"),
+            title: getValue("contact-title"),
+            department: getValue("contact-department"),
+            institution: getValue("contact-institution"),
             email: getValue("contact-email"),
+            cuPageLabel: getValue("contact-cu-label"),
+            pubmedLabel: getValue("contact-pubmed-label"),
+          },
+          peopleSection: {
+            ...(content.peopleSection || {}),
+            eyebrow: getValue("people-eyebrow"),
+            title: getValue("people-title"),
+          },
+          publicationSection: {
+            ...(content.publicationSection || {}),
+            eyebrow: getValue("publications-eyebrow"),
+            title: getValue("publications-title"),
+            searchLabel: getValue("publications-search-label"),
+            searchPlaceholder: getValue("publications-search-placeholder"),
           },
           people,
           news,
@@ -577,6 +804,19 @@
         fillForm(data);
       });
 
+      addIntroButton.addEventListener("click", () => {
+        const data = readForm();
+        data.intro.push({ metric: "", text: "" });
+        fillForm(data);
+      });
+
+      addResearchAreaButton.addEventListener("click", () => {
+        const data = readForm();
+        if (!data.research.areas) data.research.areas = [];
+        data.research.areas.push({ number: "", title: "", copy: "" });
+        fillForm(data);
+      });
+
       peopleList.addEventListener("input", (event) => {
         if (!event.target.classList.contains("person-image-url")) return;
         const row = event.target.closest(".person-row");
@@ -615,6 +855,18 @@
 
         if (event.target.classList.contains("remove-person")) {
           row.remove();
+        }
+      });
+
+      introList.addEventListener("click", (event) => {
+        if (event.target.classList.contains("remove-intro")) {
+          event.target.closest(".intro-row").remove();
+        }
+      });
+
+      researchAreaList.addEventListener("click", (event) => {
+        if (event.target.classList.contains("remove-area")) {
+          event.target.closest(".research-area-row").remove();
         }
       });
 

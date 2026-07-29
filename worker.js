@@ -16,13 +16,20 @@ function mergeContent(defaults, saved) {
   return {
     ...defaults,
     ...saved,
+    site: { ...(defaults.site || {}), ...(saved.site || {}) },
     hero: { ...(defaults.hero || {}), ...(saved.hero || {}) },
     research: { ...(defaults.research || {}), ...(saved.research || {}) },
     updates: { ...(defaults.updates || {}), ...(saved.updates || {}) },
     contact: { ...(defaults.contact || {}), ...(saved.contact || {}) },
     theme: { ...(defaults.theme || {}), ...(saved.theme || {}) },
     news: saved.news || defaults.news || [],
+    intro: saved.intro || defaults.intro || [],
     people: saved.people || defaults.people || [],
+    peopleSection: { ...(defaults.peopleSection || {}), ...(saved.peopleSection || {}) },
+    publicationSection: {
+      ...(defaults.publicationSection || {}),
+      ...(saved.publicationSection || {}),
+    },
     publications: saved.publications || defaults.publications || "",
   };
 }

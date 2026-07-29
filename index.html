@@ -14,10 +14,10 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Su Lab home">
-        <span class="brand-mark">Su</span>
+        <span class="brand-mark" id="brand-mark">Su</span>
         <span>
-          <strong>Su Lab</strong>
-          <small>Cell fate after damage</small>
+          <strong id="brand-name">Su Lab</strong>
+          <small id="brand-tagline">Cell fate after damage</small>
         </span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
@@ -31,7 +31,7 @@
 
     <main id="home">
       <section class="news-ticker" id="news" aria-label="Latest news">
-        <div class="news-label">News</div>
+        <div class="news-label" id="news-label">News</div>
         <div class="ticker-window">
           <div class="ticker-track">
             <article>
@@ -74,20 +74,20 @@
         <img src="assets/hero-cell-fate.png" alt="" class="hero-image" />
         <div class="hero-shade"></div>
         <div class="hero-content">
-          <p class="eyebrow">University of Colorado Boulder | MCDB</p>
+          <p class="eyebrow" id="hero-eyebrow">University of Colorado Boulder | MCDB</p>
           <h1 id="hero-title">Radiation response and tissue repair</h1>
           <p class="hero-copy">
             The lab uses Drosophila and cancer models to study DNA damage responses, apoptosis,
             regeneration, loss of heterozygosity, and radiation-modifying drugs.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#research">Explore research</a>
-            <a class="button ghost" href="#publications">View publications</a>
+            <a class="button primary" id="hero-primary-button" href="#research">Explore research</a>
+            <a class="button ghost" id="hero-secondary-button" href="#publications">View publications</a>
           </div>
         </div>
       </section>
 
-      <section class="intro-band" aria-label="Research summary">
+      <section class="intro-band" id="intro-band" aria-label="Research summary">
         <div>
           <span class="metric">2026</span>
           <p>Latest review on radiation-induced cell fate plasticity</p>
@@ -104,7 +104,7 @@
 
       <section class="section split" id="research">
         <div class="section-copy">
-          <p class="eyebrow">Research</p>
+          <p class="eyebrow" id="research-eyebrow">Research</p>
           <h2>How damaged tissues make choices</h2>
           <p>
             Ionizing radiation creates a moment of decision for cells and tissues. The lab studies
@@ -112,7 +112,7 @@
             whether cells die, survive, change fate, or contribute to regeneration.
           </p>
         </div>
-        <div class="research-grid" aria-label="Research areas">
+        <div class="research-grid" id="research-grid" aria-label="Research areas">
           <article>
             <span class="tile-kicker">01</span>
             <h3>Cell fate plasticity</h3>
@@ -138,8 +138,8 @@
 
       <section class="section people" id="people">
         <div class="section-heading">
-          <p class="eyebrow">People</p>
-          <h2>Lab members</h2>
+          <p class="eyebrow" id="people-eyebrow">People</p>
+          <h2 id="people-title">Lab members</h2>
         </div>
         <div class="people-grid" id="people-grid">
           <article class="person-card featured">
@@ -160,11 +160,11 @@
       <section class="section publications" id="publications">
         <div class="section-heading publication-heading">
           <div>
-            <p class="eyebrow">Publications</p>
-            <h2>Selected papers and full publication record</h2>
+            <p class="eyebrow" id="publications-eyebrow">Publications</p>
+            <h2 id="publications-title">Selected papers and full publication record</h2>
           </div>
           <label class="search-label">
-            <span>Search publications</span>
+            <span id="publication-search-label">Search publications</span>
             <input id="publication-search" type="search" placeholder="Search title, year, PMID..." />
           </label>
         </div>
@@ -191,15 +191,15 @@
 
       <section class="section contact" id="contact">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Su Lab</h2>
-          <p>Molecular, Cellular, and Developmental Biology</p>
-          <p>University of Colorado Boulder</p>
+          <p class="eyebrow" id="contact-eyebrow">Contact</p>
+          <h2 id="contact-title">Su Lab</h2>
+          <p id="contact-department">Molecular, Cellular, and Developmental Biology</p>
+          <p id="contact-institution">University of Colorado Boulder</p>
         </div>
         <div class="contact-actions">
           <a href="mailto:tin.su@colorado.edu">tin.su@colorado.edu</a>
-          <a href="https://www.colorado.edu/lab/su/" target="_blank" rel="noreferrer">Current CU page</a>
-          <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Tin+Tin+Su" target="_blank" rel="noreferrer">PubMed search</a>
+          <a id="cu-page-link" href="https://www.colorado.edu/lab/su/" target="_blank" rel="noreferrer">Current CU page</a>
+          <a id="pubmed-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=Tin+Tin+Su" target="_blank" rel="noreferrer">PubMed search</a>
         </div>
       </section>
     </main>

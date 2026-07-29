@@ -8,7 +8,7 @@ let siteContent = null;
 
 function setText(selector, value) {
   const element = document.querySelector(selector);
-  if (element && value) {
+  if (element && value !== undefined && value !== null) {
     element.textContent = value;
   }
 }
@@ -72,6 +72,39 @@ function renderPeople(people = []) {
     .join("");
 }
 
+function renderIntro(items = []) {
+  const band = document.querySelector("#intro-band");
+  if (!band || !items.length) return;
+
+  band.innerHTML = items
+    .map(
+      (item) => `
+        <div>
+          <span class="metric">${escapeHtml(item.metric || "")}</span>
+          <p>${escapeHtml(item.text || "")}</p>
+        </div>
+      `,
+    )
+    .join("");
+}
+
+function renderResearchAreas(areas = []) {
+  const grid = document.querySelector("#research-grid");
+  if (!grid || !areas.length) return;
+
+  grid.innerHTML = areas
+    .map(
+      (area) => `
+        <article>
+          <span class="tile-kicker">${escapeHtml(area.number || "")}</span>
+          <h3>${escapeHtml(area.title || "")}</h3>
+          <p>${escapeHtml(area.copy || "")}</p>
+        </article>
+      `,
+    )
+    .join("");
+}
+
 function renderNews(newsItems = []) {
   const track = document.querySelector(".ticker-track");
   if (!track || !newsItems.length) return;
@@ -105,12 +138,36 @@ function applySiteContent(content) {
   if (!content) return;
 
   setText("#hero-title", content.hero?.title);
+  setText("#brand-mark", content.site?.mark);
+  setText("#brand-name", content.site?.name);
+  setText("#brand-tagline", content.site?.tagline);
+  setText("#news-label", content.site?.newsLabel);
+  setText("#hero-eyebrow", content.site?.affiliation);
+  setText("#hero-primary-button", content.hero?.primaryButton);
+  setText("#hero-secondary-button", content.hero?.secondaryButton);
   setText(".hero-copy", content.hero?.copy);
+  setText("#research-eyebrow", content.research?.eyebrow);
   setText("#research .section-copy h2", content.research?.title);
   setText("#research .section-copy p:last-child", content.research?.copy);
+  setText("#people-eyebrow", content.peopleSection?.eyebrow);
+  setText("#people-title", content.peopleSection?.title);
+  setText("#publications-eyebrow", content.publicationSection?.eyebrow);
+  setText("#publications-title", content.publicationSection?.title);
+  setText("#publication-search-label", content.publicationSection?.searchLabel);
+  if (content.publicationSection?.searchPlaceholder && publicationSearch) {
+    publicationSearch.placeholder = content.publicationSection.searchPlaceholder;
+  }
   setText("#updates .news-panel h2", content.updates?.title);
   setText("#updates .news-panel p:not(.eyebrow)", content.updates?.copy);
+  setText("#contact-eyebrow", content.contact?.eyebrow);
+  setText("#contact-title", content.contact?.title);
+  setText("#contact-department", content.contact?.department);
+  setText("#contact-institution", content.contact?.institution);
+  setText("#cu-page-link", content.contact?.cuPageLabel);
+  setText("#pubmed-link", content.contact?.pubmedLabel);
   setEmailLinks(content.contact?.email);
+  renderIntro(content.intro);
+  renderResearchAreas(content.research?.areas);
   renderNews(content.news);
   renderPeople(content.people);
 }

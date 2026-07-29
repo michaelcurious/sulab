@@ -1,18 +1,80 @@
 {
+  "site": {
+    "name": "Su Lab",
+    "tagline": "Cell fate after damage",
+    "mark": "Su",
+    "affiliation": "University of Colorado Boulder | MCDB",
+    "newsLabel": "News"
+  },
   "hero": {
     "title": "Radiation response and tissue repair",
-    "copy": "The lab uses Drosophila and cancer models to study DNA damage responses, apoptosis, regeneration, loss of heterozygosity, and radiation-modifying drugs."
+    "copy": "The lab uses Drosophila and cancer models to study DNA damage responses, apoptosis, regeneration, loss of heterozygosity, and radiation-modifying drugs.",
+    "primaryButton": "Explore research",
+    "secondaryButton": "View publications"
   },
+  "intro": [
+    {
+      "metric": "2026",
+      "text": "Latest review on radiation-induced cell fate plasticity"
+    },
+    {
+      "metric": "Drosophila",
+      "text": "Powerful in vivo models for tissue response and regeneration"
+    },
+    {
+      "metric": "Cancer",
+      "text": "Drug screens and radiation modulators with translational relevance"
+    }
+  ],
   "research": {
+    "eyebrow": "Research",
     "title": "How damaged tissues make choices",
-    "copy": "Ionizing radiation creates a moment of decision for cells and tissues. The lab studies how damage signals, caspases, checkpoints, chromosome state, and tissue context shape whether cells die, survive, change fate, or contribute to regeneration."
+    "copy": "Ionizing radiation creates a moment of decision for cells and tissues. The lab studies how damage signals, caspases, checkpoints, chromosome state, and tissue context shape whether cells die, survive, change fate, or contribute to regeneration.",
+    "areas": [
+      {
+        "number": "01",
+        "title": "Cell fate plasticity",
+        "copy": "Past caspase activity, state switching, and survival after genotoxic stress."
+      },
+      {
+        "number": "02",
+        "title": "Radiation response",
+        "copy": "Checkpoints, apoptosis, loss of heterozygosity, and organismal recovery."
+      },
+      {
+        "number": "03",
+        "title": "Regeneration",
+        "copy": "Drosophila models for how epithelia rebuild with precision after injury."
+      },
+      {
+        "number": "04",
+        "title": "Therapeutic discovery",
+        "copy": "Radiation modulators and translation inhibitors in cancer-relevant models."
+      }
+    ]
   },
   "updates": {
     "title": "Lab news",
     "copy": "Follow recent publications, research updates, and lab announcements from the Su Lab."
   },
+  "peopleSection": {
+    "eyebrow": "People",
+    "title": "Lab members"
+  },
+  "publicationSection": {
+    "eyebrow": "Publications",
+    "title": "Selected papers and full publication record",
+    "searchLabel": "Search publications",
+    "searchPlaceholder": "Search title, year, PMID..."
+  },
   "contact": {
-    "email": "tin.su@colorado.edu"
+    "email": "tin.su@colorado.edu",
+    "eyebrow": "Contact",
+    "title": "Su Lab",
+    "department": "Molecular, Cellular, and Developmental Biology",
+    "institution": "University of Colorado Boulder",
+    "cuPageLabel": "Current CU page",
+    "pubmedLabel": "PubMed search"
   },
   "people": [
     {
