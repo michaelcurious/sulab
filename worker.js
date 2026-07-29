@@ -22,6 +22,7 @@ function mergeContent(defaults, saved) {
     contact: { ...(defaults.contact || {}), ...(saved.contact || {}) },
     theme: { ...(defaults.theme || {}), ...(saved.theme || {}) },
     news: saved.news || defaults.news || [],
+    people: saved.people || defaults.people || [],
     publications: saved.publications || defaults.publications || "",
   };
 }

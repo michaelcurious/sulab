@@ -14,6 +14,15 @@
   "contact": {
     "email": "tin.su@colorado.edu"
   },
+  "people": [
+    {
+      "name": "Tin Tin Su, PhD",
+      "title": "Principal Investigator",
+      "description": "Professor of Molecular, Cellular, and Developmental Biology. Research interests include DNA damage responses, radiation biology, tissue regeneration, and cell cycle control.",
+      "image": "",
+      "initials": "TS"
+    }
+  ],
   "theme": {
     "paper": "#f7f5ef",
     "ink": "#141816",

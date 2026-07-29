@@ -24,6 +24,54 @@ function setEmailLinks(email) {
   });
 }
 
+function escapeHtml(value = "") {
+  return String(value).replace(/[&<>"']/g, (character) => {
+    const entities = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
+    return entities[character];
+  });
+}
+
+function personInitials(person) {
+  if (person.initials) return person.initials.slice(0, 3).toUpperCase();
+  return (person.name || "Su Lab")
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+}
+
+function renderPeople(people = []) {
+  const grid = document.querySelector("#people-grid");
+  if (!grid || !people.length) return;
+
+  grid.innerHTML = people
+    .map((person, index) => {
+      const portrait = person.image
+        ? `<img class="portrait portrait-image" src="${escapeHtml(person.image)}" alt="${escapeHtml(person.name || "Lab member")}" />`
+        : `<div class="portrait initials">${escapeHtml(personInitials(person))}</div>`;
+
+      return `
+        <article class="person-card ${index === 0 ? "featured" : ""}">
+          ${portrait}
+          <div>
+            <h3>${escapeHtml(person.name || "Lab member")}</h3>
+            <p class="role">${escapeHtml(person.title || "")}</p>
+            <p>${escapeHtml(person.description || "")}</p>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 function renderNews(newsItems = []) {
   const track = document.querySelector(".ticker-track");
   if (!track || !newsItems.length) return;
@@ -64,6 +112,7 @@ function applySiteContent(content) {
   setText("#updates .news-panel p:not(.eyebrow)", content.updates?.copy);
   setEmailLinks(content.contact?.email);
   renderNews(content.news);
+  renderPeople(content.people);
 }
 
 function cleanText(value) {
