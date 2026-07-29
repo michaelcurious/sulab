@@ -318,7 +318,6 @@ h3 {
 .research-grid article,
 .person-card,
 .news-panel,
-.join-panel,
 .publication-item,
 .featured-pub {
   border: 1px solid rgba(20, 24, 22, 0.11);
@@ -342,7 +341,6 @@ h3 {
 .research-grid p,
 .person-card p,
 .news-panel li,
-.join-panel p,
 .publication-meta,
 .publication-citation {
   color: var(--muted);
@@ -513,21 +511,19 @@ input[type="search"] {
 
 .news-join {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
   background: #24312f;
 }
 
-.news-panel,
-.join-panel {
+.news-panel {
   padding: clamp(24px, 4vw, 44px);
   color: var(--white);
   background: rgba(255, 253, 248, 0.07);
   border-color: rgba(255, 253, 248, 0.13);
 }
 
-.news-panel li,
-.join-panel p {
+.news-panel li {
   color: rgba(255, 253, 248, 0.75);
 }
 
