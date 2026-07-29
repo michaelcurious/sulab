@@ -241,10 +241,35 @@
       }
 
       .status {
-        min-height: 22px;
-        margin-top: 14px;
-        color: var(--muted);
+        position: sticky;
+        top: 10px;
+        z-index: 10;
+        min-height: 44px;
+        margin: 0 0 16px;
+        padding: 11px 16px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--ink);
+        background: rgba(255, 253, 248, 0.96);
+        box-shadow: 0 12px 34px rgba(18, 24, 22, 0.1);
         font-weight: 720;
+      }
+
+      .status.error-state {
+        color: #9a3d43;
+        border-color: rgba(154, 61, 67, 0.38);
+      }
+
+      .preview-card {
+        margin-top: 14px;
+      }
+
+      .preview-frame {
+        width: 100%;
+        height: min(760px, 80vh);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
       }
 
       @media (max-width: 760px) {
@@ -285,6 +310,7 @@
           <button type="button" id="save-button">Save changes</button>
         </div>
       </header>
+      <div class="status" id="status" role="status">Changes autosave as a draft while you type.</div>
 
       <form class="grid" id="content-form">
         <section class="card">
@@ -466,7 +492,13 @@
         </section>
       </form>
 
-      <div class="status" id="status" role="status"></div>
+      <section class="card full preview-card">
+        <div class="section-title">
+          <h2>Preview</h2>
+          <a class="button" href="/?preview=1" target="_blank" rel="noreferrer">Open preview</a>
+        </div>
+        <iframe class="preview-frame" id="site-preview" src="/?preview=1" title="Site preview"></iframe>
+      </section>
     </main>
 
     <script>
@@ -479,6 +511,8 @@
       const peopleList = document.querySelector("#people-list");
       const introList = document.querySelector("#intro-list");
       const researchAreaList = document.querySelector("#research-area-list");
+      const form = document.querySelector("#content-form");
+      const preview = document.querySelector("#site-preview");
       const saveButton = document.querySelector("#save-button");
       const addNewsButton = document.querySelector("#add-news");
       const addPersonButton = document.querySelector("#add-person");
@@ -486,6 +520,14 @@
       const addResearchAreaButton = document.querySelector("#add-research-area");
       let adminCode = "";
       let content = null;
+      let isHydrating = false;
+      let autosaveTimer = null;
+      let previewTimer = null;
+
+      function setStatus(message, type = "info") {
+        status.textContent = message;
+        status.classList.toggle("error-state", type === "error");
+      }
 
       function setValue(id, value) {
         document.querySelector(`#${id}`).value = value || "";
@@ -603,6 +645,7 @@
       }
 
       function fillForm(data) {
+        isHydrating = true;
         content = data;
         setValue("site-name", data.site?.name);
         setValue("site-tagline", data.site?.tagline);
@@ -636,6 +679,8 @@
         renderResearchAreas(data.research?.areas || []);
         renderPeople(data.people || []);
         renderNews(data.news || []);
+        isHydrating = false;
+        queueDraftUpdate(false);
       }
 
       function readForm() {
@@ -735,17 +780,17 @@
       }
 
       async function loadContent() {
-        status.textContent = "Loading content...";
+        setStatus("Loading content...");
         const response = await fetch("/api/content", { cache: "no-store" });
         if (!response.ok) {
           throw new Error("Could not load content.");
         }
         fillForm(await response.json());
-        status.textContent = "";
+        setStatus("Loaded. Changes autosave as a draft while you type.");
       }
 
       async function saveContent() {
-        status.textContent = "Saving...";
+        setStatus("Saving to live site...");
         saveButton.disabled = true;
 
         try {
@@ -763,12 +808,36 @@
             throw new Error(result.error || "Could not save changes.");
           }
 
-          status.textContent = "Saved. Refresh the public site to see changes.";
+          localStorage.removeItem("su-lab-preview-content");
+          setStatus(`Saved to live site at ${new Date().toLocaleTimeString()}.`);
         } catch (saveError) {
-          status.textContent = saveError.message;
+          setStatus(saveError.message, "error");
         } finally {
           saveButton.disabled = false;
         }
+      }
+
+      function updatePreview() {
+        const data = readForm();
+        localStorage.setItem("su-lab-preview-content", JSON.stringify(data));
+        if (preview) {
+          preview.src = `/?preview=1&t=${Date.now()}`;
+        }
+      }
+
+      function queueDraftUpdate(shouldAutosave = true) {
+        if (isHydrating || !content) return;
+
+        clearTimeout(previewTimer);
+        previewTimer = setTimeout(() => {
+          updatePreview();
+          setStatus("Draft updated in preview. Saving to live site...");
+        }, 350);
+
+        if (!shouldAutosave) return;
+
+        clearTimeout(autosaveTimer);
+        autosaveTimer = setTimeout(saveContent, 1600);
       }
 
       function openEditor(code) {
@@ -776,7 +845,7 @@
         gate.classList.add("hidden");
         editor.classList.remove("hidden");
         loadContent().catch((loadError) => {
-          status.textContent = loadError.message;
+          setStatus(loadError.message, "error");
         });
       }
 
@@ -796,18 +865,21 @@
         const data = readForm();
         data.news.push({ date: "", label: "", text: "" });
         fillForm(data);
+        queueDraftUpdate();
       });
 
       addPersonButton.addEventListener("click", () => {
         const data = readForm();
         data.people.push({ name: "", title: "", description: "", image: "", initials: "" });
         fillForm(data);
+        queueDraftUpdate();
       });
 
       addIntroButton.addEventListener("click", () => {
         const data = readForm();
         data.intro.push({ metric: "", text: "" });
         fillForm(data);
+        queueDraftUpdate();
       });
 
       addResearchAreaButton.addEventListener("click", () => {
@@ -815,6 +887,7 @@
         if (!data.research.areas) data.research.areas = [];
         data.research.areas.push({ number: "", title: "", copy: "" });
         fillForm(data);
+        queueDraftUpdate();
       });
 
       peopleList.addEventListener("input", (event) => {
@@ -824,6 +897,7 @@
         row.querySelector(".person-preview").src =
           event.target.value.trim() ||
           "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23ece8dc'/%3E%3C/svg%3E";
+        queueDraftUpdate();
       });
 
       peopleList.addEventListener("change", (event) => {
@@ -837,6 +911,7 @@
           row.dataset.image = reader.result;
           row.querySelector(".person-image-url").value = "";
           row.querySelector(".person-preview").src = reader.result;
+          queueDraftUpdate();
         });
         reader.readAsDataURL(file);
       });
@@ -851,25 +926,31 @@
           row.querySelector(".person-image-upload").value = "";
           row.querySelector(".person-preview").src =
             "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23ece8dc'/%3E%3C/svg%3E";
+          queueDraftUpdate();
         }
 
         if (event.target.classList.contains("remove-person")) {
           row.remove();
+          queueDraftUpdate();
         }
       });
 
       introList.addEventListener("click", (event) => {
         if (event.target.classList.contains("remove-intro")) {
           event.target.closest(".intro-row").remove();
+          queueDraftUpdate();
         }
       });
 
       researchAreaList.addEventListener("click", (event) => {
         if (event.target.classList.contains("remove-area")) {
           event.target.closest(".research-area-row").remove();
+          queueDraftUpdate();
         }
       });
 
+      form.addEventListener("input", () => queueDraftUpdate());
+      form.addEventListener("change", () => queueDraftUpdate());
       saveButton.addEventListener("click", saveContent);
 
       const savedCode = sessionStorage.getItem("su-lab-editor-code");

@@ -283,6 +283,15 @@ filterButtons.forEach((button) => {
 publicationSearch.addEventListener("input", renderPublications);
 
 async function loadSiteContent() {
+  const params = new URLSearchParams(window.location.search);
+  const previewContent = localStorage.getItem("su-lab-preview-content");
+
+  if (params.get("preview") === "1" && previewContent) {
+    siteContent = JSON.parse(previewContent);
+    applySiteContent(siteContent);
+    return;
+  }
+
   try {
     const response = await fetch("/api/content", { cache: "no-store" });
     if (response.ok) {
